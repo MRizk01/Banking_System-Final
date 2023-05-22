@@ -17,9 +17,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     Thread th;
     int s=0;
     static String panel_name="";
-    /**
-     * Creates new form home_page
-     */
+
     public home_page() {
         initComponents();
         setTitle("Bank Management System");
