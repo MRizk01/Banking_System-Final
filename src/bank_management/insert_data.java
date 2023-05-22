@@ -4,10 +4,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
-/**
- *
- * @author ABD
- */
+
 public class insert_data {
     Connection conn;
     ResultSet res;
@@ -34,7 +31,7 @@ public class insert_data {
                     +"address VARCHAR(50),"
                     +"PRIMARY KEY(id)"
                     +")");
-
+/*
             stt.execute("INSERT INTO user (id,pass,ac_type,join_date,nation,nid,name,p_number,dob,address)"
                         +"SELECT * FROM (SELECT '10001000', 'passpass','Student','2020-01-10','Bangladeshi','1111111100','Md. Abdullah','01710000001','1995-01-02',' Bamnartek, Dhaka, Bangladesh') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM user WHERE id = '10001000'" +")");
             stt.execute("INSERT INTO user (id,pass,ac_type,join_date,nation,nid,name,p_number,dob,address)"
@@ -75,7 +72,7 @@ public class insert_data {
                         +"SELECT * FROM (SELECT '10001018', 'passpass','Student','2023-12-11','Bangladeshi','1111111118','Md. Ashraful Haque','01710000018','1995-01-02',' Uttara, Dhaka') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM user WHERE id = '10001018'" +")");
             stt.execute("INSERT INTO user (id,pass,ac_type,join_date,nation,nid,name,p_number,dob,address)"
                         +"SELECT * FROM (SELECT '10001019', 'passpass','Student','2023-12-15','Bangladeshi','1111111119','Md. Asadullah','01710000019','1995-01-02',' Uttara, Dhaka') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM user WHERE id = '10001019'" +")");
-            
+          */
 //money table and insert
              stt.execute("CREATE TABLE IF NOT EXISTS money("
                     +"id VARCHAR(15) not null,"
@@ -83,7 +80,7 @@ public class insert_data {
                     +"amount BIGINT(12),"
                     +"PRIMARY KEY(id)"
                     +")");
-                        
+             /*
             stt.execute("INSERT INTO money (id,name,amount)"
                         +"SELECT * FROM (SELECT '10001000','Md. Abdullah','0') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM money WHERE id = '10001000'" +")");
             stt.execute("INSERT INTO money (id,name,amount)"
@@ -125,7 +122,7 @@ public class insert_data {
             stt.execute("INSERT INTO money (id,name,amount)"
                         +"SELECT * FROM (SELECT '10001019','Md. Asadullah','0') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM money WHERE id = '10001019'" +")");
              
-            
+            */
  
             
               stt.execute("CREATE TABLE IF NOT EXISTS history("
@@ -135,7 +132,7 @@ public class insert_data {
                     +"purpose VARCHAR(20) not null,"
                     +"t_to_id VARCHAR(20)"
                     +")");
-              
+              /*
                stt.execute("INSERT INTO history (id,amount, date, purpose)"
                         +"SELECT * FROM (SELECT '15103006','3608000', '2017-04-05', 'Deposit') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM history WHERE id = '15103006'" +")");
                stt.execute("INSERT INTO history (id,amount, date, purpose)"
@@ -148,7 +145,7 @@ public class insert_data {
                         +"SELECT * FROM (SELECT '15103006','20030', '2017-04-05', 'transfer','100010005') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM history WHERE id = '15103006' and t_to_id='10001005'"+")");
                stt.execute("INSERT INTO history (id,amount, date, purpose)"
                         +"SELECT * FROM (SELECT '15103006','2000', '2017-04-05', 'Withdraw') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM history WHERE id = '15103006' and purpose='Withdraw'"+")");
-             
+             */
              
             //admin section   ..................................//
              stt.execute("CREATE TABLE IF NOT EXISTS admin("
