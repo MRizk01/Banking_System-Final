@@ -42,29 +42,6 @@ INSERT INTO `admin` (`id`, `pass`, `name`, `p_number`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `executive`
---
-
-CREATE TABLE `executive` (
-  `id` int(11) NOT NULL,
-  `pass` varchar(15) NOT NULL,
-  `join_date` date DEFAULT NULL,
-  `nation` varchar(15) DEFAULT NULL,
-  `nid` bigint(20) NOT NULL,
-  `designation` varchar(15) DEFAULT NULL,
-  `name` varchar(30) DEFAULT NULL,
-  `p_number` int(11) DEFAULT NULL,
-  `dob` date DEFAULT NULL,
-  `address` varchar(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `executive`
---
-
-INSERT INTO `executive` (`id`, `pass`, `join_date`, `nation`, `nid`, `designation`, `name`, `p_number`, `dob`, `address`) VALUES
-(15103029, 'pass', NULL, NULL, 212, NULL, 'ABD', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
