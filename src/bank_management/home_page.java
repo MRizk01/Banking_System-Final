@@ -181,7 +181,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         full_table = new javax.swing.JTable();
         list = new javax.swing.JLabel();
         jButton55 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
         search = new javax.swing.JPanel();
         details10 = new javax.swing.JPanel();
         jLabel113 = new javax.swing.JLabel();
@@ -245,12 +244,10 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         full_table4 = new javax.swing.JTable();
         list3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton44 = new javax.swing.JButton();
         history = new javax.swing.JPanel();
         jScrollPane10 = new javax.swing.JScrollPane();
         full_table5 = new javax.swing.JTable();
         list4 = new javax.swing.JLabel();
-        jButton58 = new javax.swing.JButton();
         admin_up = new javax.swing.JPanel();
         details13 = new javax.swing.JPanel();
         jLabel146 = new javax.swing.JLabel();
@@ -346,7 +343,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         transaction_history = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         full_table1 = new javax.swing.JTable();
-        jButton62 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.FlowLayout());
@@ -1033,13 +1029,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        jButton45.setText("Print");
-        jButton45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton45ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout user_list_tableLayout = new javax.swing.GroupLayout(user_list_table);
         user_list_table.setLayout(user_list_tableLayout);
         user_list_tableLayout.setHorizontalGroup(
@@ -1054,7 +1043,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
                                                 .addGap(0, 0, Short.MAX_VALUE)
                                                 .addGroup(user_list_tableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_list_tableLayout.createSequentialGroup()
-                                                                .addComponent(jButton45)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jButton55)
                                                                 .addContainerGap())
@@ -1071,7 +1059,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(user_list_tableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jButton55)
-                                        .addComponent(jButton45))
+                                        )
                                 .addGap(5, 5, 5))
         );
 
@@ -1643,6 +1631,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         });
         jScrollPane8.setViewportView(full_table3);
 
+
         jButton57.setText("Delete");
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1761,20 +1750,14 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(6, 139, 0, 0);
         balanced.add(jLabel1, gridBagConstraints);
 
-        jButton44.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton44.setText("Print");
-        jButton44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton44ActionPerformed(evt);
-            }
-        });
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.ipadx = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 22, 17, 0);
-        balanced.add(jButton44, gridBagConstraints);
+
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1838,20 +1821,14 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(6, 187, 0, 0);
         history.add(list4, gridBagConstraints);
 
-        jButton58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton58.setText("Print");
-        jButton58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton58ActionPerformed(evt);
-            }
-        });
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.ipadx = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 168, 16, 16);
-        history.add(jButton58, gridBagConstraints);
+
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -2901,18 +2878,13 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(2, 2, 0, 2);
         transaction_history.add(jScrollPane6, gridBagConstraints);
 
-        jButton62.setText("Print");
-        jButton62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton62ActionPerformed(evt);
-            }
-        });
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 529, 2, 0);
-        transaction_history.add(jButton62, gridBagConstraints);
+
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -3964,57 +3936,11 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         // TODO add your handling code here:
     }//GEN-LAST:event_full_table5ComponentResized
 
-    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
-        try{
-            MessageFormat header = new MessageFormat("Customer Details");
-            MessageFormat footer = new MessageFormat("");
-            full_table.print(JTable.PrintMode.FIT_WIDTH, header, footer);
 
-        }catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
 
-    }//GEN-LAST:event_jButton45ActionPerformed
 
-    private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
-        // TODO add your handling code here:
 
-        try{
-            MessageFormat header = new MessageFormat("Total Transaction History");
-            MessageFormat footer = new MessageFormat("");
-            full_table5.print(JTable.PrintMode.FIT_WIDTH, header, footer);
 
-        }catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_jButton58ActionPerformed
-
-    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
-        try{
-            MessageFormat header = new MessageFormat(" "+jLabel1.getText()+"'");
-            MessageFormat footer = new MessageFormat("");
-            full_table4.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-
-        }catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_jButton44ActionPerformed
-
-    private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
-        // TODO add your handling code here:
-        try{
-            MessageFormat header = new MessageFormat("Transaction History of "+user_p_name.getText()+"(ID : "+user_p_id.getText()+")");
-            MessageFormat footer = new MessageFormat("");
-            full_table1.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-
-        }catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_jButton62ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         jTextField15.setText("");
@@ -4477,8 +4403,8 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
+
+
     private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
@@ -4488,9 +4414,8 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton jButton53;
     private javax.swing.JButton jButton55;
     private javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
+
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton62;
     private javax.swing.JButton jButton64;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
