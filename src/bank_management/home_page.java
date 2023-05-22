@@ -1368,7 +1368,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         details11.setLayout(new java.awt.GridBagLayout());
 
         jLabel123.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel123.setText("Officer Search and Update");
         jLabel123.setMaximumSize(new java.awt.Dimension(100, 14));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1644,9 +1643,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         });
         jScrollPane8.setViewportView(full_table3);
 
-        list2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        list2.setText("Officer List");
-
         jButton57.setText("Delete");
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1654,12 +1650,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        jButton48.setText("Print");
-        jButton48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton48ActionPerformed(evt);
-            }
-        });
+
 
         javax.swing.GroupLayout ex_listLayout = new javax.swing.GroupLayout(ex_list);
         ex_list.setLayout(ex_listLayout);
@@ -3068,48 +3059,8 @@ public class home_page extends javax.swing.JFrame implements Runnable{
             stt = conn.createStatement();
             stt.execute("USE bank_management");
 
-            if(account.getSelectedItem().equals("Officer")){
-                try{
 
-                    String query="select* from executive where id='"+user_id.getText()+"' and pass='"+user_pass.getText()+"'";
-                    res =stt.executeQuery(query);
-                    int count=0;
-
-                    while(res.next()){
-                        count=1;
-                    }
-
-                    if(count==1){
-                        home_login.removeAll();
-                        home_login.repaint();
-                        home_login.revalidate();
-
-                        home_login.add(progress);
-                        home_login.repaint();
-                        home_login.revalidate();
-                        getindex("stuff");
-                        th = new Thread((Runnable)this);
-                        th.start();
-
-                        String sql = "select* from executive where id = '"+user_id.getText()+"'";
-                        res = stt.executeQuery(sql);
-                        while(res.next()){
-
-                        }
-                    }
-                    else{
-                        user_id.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                        user_pass.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                        JOptionPane.showMessageDialog(null,"check ID or password ");/// error for username or password
-                    }
-
-                }
-                catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(null, ex.toString());// sarver error ,show message
-                }
-            }
-
-            else if(account.getSelectedItem().equals("Local User")){
+             if(account.getSelectedItem().equals("Local User")){
                 try{
                     String login_id = user_id.getText();
                     String query="select* from user where id='"+user_id.getText()+"' and pass='"+user_pass.getText()+"'";
@@ -4180,17 +4131,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         user_list();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
-        try{
-            MessageFormat header = new MessageFormat("Officer Details");
-            MessageFormat footer = new MessageFormat("");
-            full_table3.print(JTable.PrintMode.FIT_WIDTH, header, footer);
 
-        }catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_jButton48ActionPerformed
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         try{
