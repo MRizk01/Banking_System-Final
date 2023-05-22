@@ -162,32 +162,7 @@ public class insert_data {
              stt.execute("INSERT INTO admin (id,pass, name, p_number)"
                         +"SELECT * FROM (SELECT 'admin','pass', 'Md. Abdullah', '01738868597') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM admin WHERE id = 'admin'" +")");
              
-             //Executive section ....................................//
-              stt.execute("CREATE TABLE IF NOT EXISTS executive("
-                    +"id VARCHAR(15) not null,"
-                    +"pass VARCHAR(15) not null,"
-                    +"join_date DATE,"
-                    +"nation VARCHAR(15),"
-                    +"nid BIGINT not null,"
-                    +"designation VARCHAR(25),"
-                    +"name VARCHAR(30),"
-                    +"p_number VARCHAR(14),"
-                    +"dob DATE,"
-                    +"address VARCHAR(50),"
-                    +"PRIMARY KEY(id)"
-                    +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 'EX1000','passpass','2016-1-12','Bangladeshi', '21221311','Ass. Manager', 'MD. Harisul Islam','01765434343','1980-12-3','Uttara Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 'EX1000'" +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 'EX001','passpass','2015-2-12','Bangladeshi', '212213211','Manager', 'MD. Abdullah','01738868597','1995-1-10','Uttara Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 'EX001'" +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 'EX1001','passpass','2016-3-12','Bangladeshi', '19021311','Cashier', 'MD. Rasel Hosain','01665434343','1970-12-3','Mirpur Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 'EX1001'" +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 's15103056','pass','2016-1-12','Bangladeshi', '323453222','Cashier', 'Saad','01615434343','1995-2-1','Uttara Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 's15103056'" +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 'EX1003','passpass','2016-1-12','Bangladeshi', '99221311','Loan Officer', 'Mst. Bijori Islam','01805434343','1980-12-3','Bamnartek Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 'EX1003'" +")");
-              stt.execute("INSERT INTO executive (id,pass,join_date,nation, nid,designation, name,p_number,dob,address)"
-                        +"SELECT * FROM (SELECT 'EX1004','passpass','2016-1-12','Bangladeshi', '78221311','Chief Financial Officer', 'MD. Habib Islam','01765434343','1980-12-3','Uttara Dhaka-1230') AS tmp WHERE NOT EXISTS ("+"SELECT id FROM executive WHERE id = 'EX1004'" +")");
+
               
              
              
