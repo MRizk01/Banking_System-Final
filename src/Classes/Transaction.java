@@ -7,7 +7,7 @@ public class Transaction {
 
 
         //attributes
-        private int toID;
+        private int recipientID;
         private int ID;
         private String type;
         private LocalDate date;
@@ -20,9 +20,9 @@ public class Transaction {
             this.date = LocalDate.now();
             this.amount = amount;
         }
-    public Transaction(int ID, int toID, String type,  double amount) {
+    public Transaction(int ID, int recipientID, String type,  double amount) {
         this.ID = ID;
-        this.toID = toID;
+        this.recipientID = recipientID;
         this.type = type;
         this.date = LocalDate.now();
         this.amount = amount;
@@ -31,33 +31,32 @@ public class Transaction {
         public int getID() {
             return ID;
         }
-    public int getToID() {
-        return toID;
+    public int getRecipientID() {
+        return recipientID;
     }
 
         public String getType() {
             return type;
         }
 
-
-
         public double getAmount() {
             return amount;
         }
+    public LocalDate getTransactionDate() {
+        return date;
+    }
 
 
         //setters
         public void setID(int ID) {
             this.ID = ID;
         }
-    public void setToID(int toID) {
-        this.toID=toID;
+    public void setRecipientID(int recipientID) {
+        this.recipientID=recipientID;
     }
     public void setType(String type) {
             this.type = type;
         }
-
-
 
         public void setAmount(double amount) {
             this.amount = amount;

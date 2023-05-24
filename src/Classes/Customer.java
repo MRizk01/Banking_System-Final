@@ -1,14 +1,20 @@
 package Classes;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
 
 public class Customer {
+    private List<Transaction> transactionList;
+
 
     //attributes
     private double balance;
     private int ID;
     private String password;
-    private String accountType;
+//    private String accountType;
 
     private LocalDate joinDate;
     private String nationality;
@@ -31,9 +37,9 @@ public class Customer {
         this.password = password;
     }
 
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
+//    public void setAccountType(String accountType) {
+//        this.accountType = accountType;
+//    }
 
     public void setJoinDate(LocalDate joinDate) {
         this.joinDate = joinDate;
@@ -72,9 +78,12 @@ public class Customer {
         return password;
     }
 
-    public String getAccountType() {
-        return accountType;
-    }
+//    public String getAccountType() {
+//        return accountType;
+//    }
+
+
+
 
     public LocalDate getJoinDate() {
         return joinDate;
@@ -103,11 +112,11 @@ public class Customer {
     public String getAddress() {
         return address;
     }
-    public Customer(int ID, String password, String accountType, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
+    public Customer(int ID, String password, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
         this.balance=0;
         this.ID = ID;
         this.password = password;
-        this.accountType = accountType;
+//        this.accountType = accountType;
         this.joinDate = LocalDate.now();
         this.nationality=nationality;
         this.nationalID=nationalID;
@@ -115,14 +124,15 @@ public class Customer {
         this.phone=phone;
         this.dataOfBirth=dataOfBirth;
         this.address=address;
+        this.transactionList = new ArrayList<>();
 
     }
-    public Customer(double balance,int ID, String password, String accountType, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
+    public Customer(double balance,int ID, String password, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
         this.balance=balance;
         joinDate = LocalDate.now();
         this.ID = ID;
         this.password = password;
-        this.accountType = accountType;
+//        this.accountType = accountType;
         this.joinDate = joinDate;
         this.nationality=nationality;
         this.nationalID=nationalID;
@@ -130,26 +140,52 @@ public class Customer {
         this.phone=phone;
         this.dataOfBirth=dataOfBirth;
         this.address=address;
+        this.transactionList = new ArrayList<>();
+
 
     }
+    //getter for balance
+    public double getBalance(){
+        return balance;
+    }
+    //setter for balance
+    public void setBalance(double balance){
+        this.balance=balance;
+    }
+
+
 
     //withdraw
     public void withdraw(double amount){
-       Transaction transaction1 = createTransaction(this.ID,"withdraw", amount);
-
+       Transaction transaction = createTransaction(this.ID,"withdraw", amount);
         this.balance-=amount;
+        //add transaction to list
+        transactionList.add(transaction);
+
     }
     //deposit
     public void deposit(double amount){
-        Transaction transaction2 = createTransaction(this.ID,"deposit", amount);
+        Transaction transaction = createTransaction(this.ID,"deposit", amount);
         this.balance+=amount;
+        //add transaction to list
+        transactionList.add(transaction);
+
     }
     //transfer
-    public void transfer(double amount,int CId){
+    public void transfer(double amount,int recipientID){
         this.balance-=amount;
-        Admin.searchCustomer(CId).deposit(amount);
-        Transaction transaction3 = createTransaction(this.ID,CId,"transfer", amount);
+        Admin.searchCustomer(recipientID).deposit(amount);
+        Transaction transaction = createTransaction(this.ID,recipientID,"transfer", amount);
+        // Add the transaction to the transaction list of both the sender and recipient
+        this.transactionList.add(transaction);
+        Admin.searchCustomer(recipientID).getTransactionList().add(transaction);
     }
+
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+
 
     //create new transaction
     public Transaction createTransaction(int ID, int toID, String type, double amount){
@@ -167,4 +203,7 @@ public class Customer {
     }
 
 
+    public String getDateOfBirth() {
+        return dataOfBirth;
+    }
 }

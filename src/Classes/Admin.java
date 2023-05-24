@@ -8,13 +8,24 @@ import java.util.ArrayList;
 
 public class Admin {
 
-    private static List<Customer> customers;
+    public static List<Customer> customers;
 
     // Attributes
     private int ID;
     private String password;
     private String name;
     private String phone;
+
+    //admin login
+    public boolean login(int ID, String password){
+        if (this.getID()==ID) {
+            //check password
+            if (this.getPassword().equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // Constructor
     public Admin(int ID, String password, String name, String phone) {
@@ -44,10 +55,10 @@ public class Admin {
     }
 
 
-    //create new customer
-    public void createCustomer(int CID, String Cpassword,String CaccountType, String Cnationality,int CnationalID,String Cname,String Cphone,String CdataOfBirth,String Caddress){
-        //create new customer
-        Customer customer = new Customer( CID,  Cpassword, CaccountType,   Cnationality, CnationalID, Cname, Cphone, CdataOfBirth, Caddress);
+    //create customer
+    public void createCustomer(int CID, String Cpassword, String Cnationality,int CnationalID,String Cname,String Cphone,String CdataOfBirth,String Caddress){
+        //create customer
+        Customer customer = new Customer(CID, Cpassword, Cnationality, CnationalID, Cname, Cphone, CdataOfBirth, Caddress);
         //add customer to list
         customers.add(customer);
     }
@@ -64,13 +75,13 @@ public class Admin {
     }
 
     //update customer
-    public void updateCustomer(int CID, String Cpassword,String CaccountType, String Cnationality,int CnationalID,String Cname,String Cphone,String CdataOfBirth,String Caddress){
+    public void updateCustomer(int CID, String Cpassword, String Cnationality,int CnationalID,String Cname,String Cphone,String CdataOfBirth,String Caddress){
         //search for customer
         for (int i = 0; i < customers.size(); i++) {
             if (customers.get(i).getID()==CID) {
                 //update customer
                 customers.get(i).setPassword(Cpassword);
-                customers.get(i).setAccountType(CaccountType);
+//                customers.get(i).setAccountType(CaccountType);
                 customers.get(i).setNationality(Cnationality);
                 customers.get(i).setNationalID(CnationalID);
                 customers.get(i).setName(Cname);
