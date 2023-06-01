@@ -740,7 +740,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
 
         jButton49.setFont(new java.awt.Font("Sitka Small", 1, 24)); // NOI18N
         jButton49.setForeground(new java.awt.Color(255, 255, 255));
-        jButton49.setText("Dash Board");
+        jButton49.setText("DashBoard");
         jButton49.setContentAreaFilled(false);
         jButton49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
