@@ -12,13 +12,14 @@ public class Customer {
 
     //attributes
     private double balance;
-    private int ID;
+    private String ID;
     private String password;
 //    private String accountType;
 
-    private LocalDate joinDate;
+    //private LocalDate joinDate;
+    private String joinDate;
     private String nationality;
-    private int nationalID;
+    private String nationalID;
     private String name;
     private String phone;
     private String dataOfBirth;
@@ -29,11 +30,14 @@ public class Customer {
 
 
 
-    public void setID(int ID) {
+    public void setID(String ID)
+    {
         this.ID = ID;
     }
 
     public void setPassword(String password) {
+        if(password.length() < 6)
+            throw new IllegalArgumentException("Password must be at least 8 characters long");
         this.password = password;
     }
 
@@ -41,7 +45,7 @@ public class Customer {
 //        this.accountType = accountType;
 //    }
 
-    public void setJoinDate(LocalDate joinDate) {
+    public void setJoinDate(String joinDate) {
         this.joinDate = joinDate;
     }
 
@@ -49,7 +53,7 @@ public class Customer {
         this.nationality = nationality;
     }
 
-    public void setNationalID(int nationalID) {
+    public void setNationalID(String nationalID) {
         this.nationalID = nationalID;
     }
 
@@ -70,7 +74,7 @@ public class Customer {
     }
 
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
@@ -85,7 +89,7 @@ public class Customer {
 
 
 
-    public LocalDate getJoinDate() {
+    public String getJoinDate() {
         return joinDate;
     }
 
@@ -93,7 +97,7 @@ public class Customer {
         return nationality;
     }
 
-    public int getNationalID() {
+    public String getNationalID() {
         return nationalID;
     }
 
@@ -112,12 +116,12 @@ public class Customer {
     public String getAddress() {
         return address;
     }
-    public Customer(int ID, String password, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
+    public Customer(String ID, String password, String nationality, String nationalID, String name, String phone, String dataOfBirth, String address) {
         this.balance=0;
         this.ID = ID;
         this.password = password;
 //        this.accountType = accountType;
-        this.joinDate = LocalDate.now();
+        this.joinDate = LocalDate.now().toString();
         this.nationality=nationality;
         this.nationalID=nationalID;
         this.name=name;
@@ -127,9 +131,9 @@ public class Customer {
         this.transactionList = new ArrayList<>();
 
     }
-    public Customer(double balance,int ID, String password, String nationality, int nationalID, String name, String phone, String dataOfBirth, String address) {
+    public Customer(double balance,String ID, String password, String nationality, String nationalID, String name, String phone, String dataOfBirth, String address) {
         this.balance=balance;
-        joinDate = LocalDate.now();
+        joinDate = LocalDate.now().toString();
         this.ID = ID;
         this.password = password;
 //        this.accountType = accountType;
@@ -154,9 +158,20 @@ public class Customer {
     }
 
 
+    public String getDateOfBirth() {
+        return dataOfBirth;
+    }
 
     //withdraw
     public void withdraw(double amount){
+        if(amount>this.balance){
+            System.out.println("Insufficient balance");
+            return;
+        }
+        else if (amount<0){
+            System.out.println("Invalid amount");
+            return;
+        }
        Transaction transaction = createTransaction(this.ID,"withdraw", amount);
         this.balance-=amount;
         //add transaction to list
@@ -165,6 +180,10 @@ public class Customer {
     }
     //deposit
     public void deposit(double amount){
+        if(amount<0){
+            System.out.println("Invalid amount");
+            return;
+        }
         Transaction transaction = createTransaction(this.ID,"deposit", amount);
         this.balance+=amount;
         //add transaction to list
@@ -172,29 +191,40 @@ public class Customer {
 
     }
     //transfer
-    public void transfer(double amount,int recipientID){
+    public void transfer(double amount,String recipientID){
+        if(amount>this.balance){
+            System.out.println("Insufficient balance");
+            return;
+        }
+        Customer recipient = Admin.searchCustomer(recipientID);
+        if(recipient==null){
+            System.out.println("Recipient not found");
+            return;
+        }
+        recipient.deposit(amount);
         this.balance-=amount;
-        Admin.searchCustomer(recipientID).deposit(amount);
         Transaction transaction = createTransaction(this.ID,recipientID,"transfer", amount);
         // Add the transaction to the transaction list of both the sender and recipient
         this.transactionList.add(transaction);
-        Admin.searchCustomer(recipientID).getTransactionList().add(transaction);
+        recipient.getTransactionList().add(transaction);
     }
 
     public List<Transaction> getTransactionList() {
         return transactionList;
     }
 
-
+    public List<Transaction> getTransactionHistory() {
+        return transactionList;
+    }
 
     //create new transaction
-    public Transaction createTransaction(int ID, int toID, String type, double amount){
+    public Transaction createTransaction(String ID, String toID, String type, double amount){
         //create new transaction
         return new Transaction( ID, toID, type, amount);
         //add transaction to list
 //        transactions.add(transaction);
     }
-    public Transaction createTransaction(int ID, String type,  double amount){
+    public Transaction createTransaction(String ID, String type,  double amount){
         //create new transaction
         return new Transaction( ID, type, amount);
         //add transaction to list
@@ -203,7 +233,4 @@ public class Customer {
     }
 
 
-    public String getDateOfBirth() {
-        return dataOfBirth;
-    }
 }

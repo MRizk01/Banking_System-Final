@@ -6,60 +6,63 @@ import java.time.LocalDate;
 public class Transaction {
 
 
-        //attributes
-        private int recipientID;
-        private int ID;
-        private String type;
-        private LocalDate date;
-        private double amount;
+    //attributes
+    private String recipientID;
+    private String ID;
+    private String type;
+    private String date;
+    private double amount;
 
-        //constructor
-        public Transaction(int ID, String type,  double amount) {
-            this.ID = ID;
-            this.type = type;
-            this.date = LocalDate.now();
-            this.amount = amount;
-        }
-    public Transaction(int ID, int recipientID, String type,  double amount) {
+    //constructor
+    public Transaction(String ID, String type, double amount) {
+        this.ID = ID;
+        this.type = type;
+        this.date = LocalDate.now().toString();
+        this.amount = amount;
+    }
+
+    public Transaction(String ID, String recipientID, String type, double amount) {
         this.ID = ID;
         this.recipientID = recipientID;
         this.type = type;
-        this.date = LocalDate.now();
+        this.date = LocalDate.now().toString();
         this.amount = amount;
     }
-        //getters
-        public int getID() {
-            return ID;
-        }
-    public int getRecipientID() {
+
+    //getters
+    public String getID() {
+        return ID;
+    }
+
+    public String getRecipientID() {
         return recipientID;
     }
 
-        public String getType() {
-            return type;
-        }
+    public String getType() {
+        return type;
+    }
 
-        public double getAmount() {
-            return amount;
-        }
-    public LocalDate getTransactionDate() {
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getTransactionDate() {
         return date;
     }
 
 
-        //setters
-        public void setID(int ID) {
-            this.ID = ID;
-        }
-    public void setRecipientID(int recipientID) {
-        this.recipientID=recipientID;
+    public boolean isDeposit() {
+        return type.equals("deposit");
     }
-    public void setType(String type) {
-            this.type = type;
-        }
+    public boolean isTransfer() {
+        return type.equals("transfer");
+    }
 
-        public void setAmount(double amount) {
-            this.amount = amount;
-        }
+
+
+
+
+
+
 
 }

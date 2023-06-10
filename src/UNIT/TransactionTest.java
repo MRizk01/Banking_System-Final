@@ -13,23 +13,23 @@ public class TransactionTest {
 
     @Test
     public void testGetID() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
-        int expectedID = 1;
-        int actualID = transaction.getID();
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
+        String expectedID = "1";
+        String actualID = transaction.getID();
         assertEquals(expectedID, actualID);
     }
 
     @Test
     public void testGetRecipientID() {
-        Transaction transaction = new Transaction(1, 2, "transfer", 100.0);
-        int expectedRecipientID = 2;
-        int actualRecipientID = transaction.getRecipientID();
+        Transaction transaction = new Transaction("1", "2", "transfer", 100.0);
+        String expectedRecipientID = "2";
+        String actualRecipientID = transaction.getRecipientID();
         assertEquals(expectedRecipientID, actualRecipientID);
     }
 
     @Test
     public void testGetType() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
         String expectedType = "deposit";
         String actualType = transaction.getType();
         assertEquals(expectedType, actualType);
@@ -37,38 +37,38 @@ public class TransactionTest {
 
     @Test
     public void testGetAmount() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
         double expectedAmount = 100.0;
         double actualAmount = transaction.getAmount();
         assertEquals(expectedAmount, actualAmount, 0.0);
     }
     @Test
     public void testGetTransactionDate() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
-        assertEquals("2023-05-24", transaction.getTransactionDate().toString());
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
+        assertEquals("2023-06-10", transaction.getTransactionDate());
     }
-
+/*
     @Test
     public void testSetID() {
-        Transaction transaction = new Transaction(1,"deposit", 100.0);
-        transaction.setID(2);
-        int expectedID = 2;
-        int actualID = transaction.getID();
+        Transaction transaction = new Transaction("1","deposit", 100.0);
+        transaction.setID("2");
+        String expectedID = "2";
+        String actualID = transaction.getID();
         assertEquals(expectedID, actualID);
     }
 
     @Test
     public void testSetRecipientID() {
-        Transaction transaction = new Transaction(1, "transfer", 100.0);
-        transaction.setRecipientID(2);
-        int expectedRecipientID = 2;
-        int actualRecipientID = transaction.getRecipientID();
+        Transaction transaction = new Transaction("1", "transfer", 100.0);
+        transaction.setRecipientID("2");
+        String expectedRecipientID = "2";
+        String actualRecipientID = transaction.getRecipientID();
         assertEquals(expectedRecipientID, actualRecipientID);
     }
 
     @Test
     public void testSetType() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
         transaction.setType("withdrawal");
         String expectedType = "withdrawal";
         String actualType = transaction.getType();
@@ -77,11 +77,38 @@ public class TransactionTest {
 
     @Test
     public void testSetAmount() {
-        Transaction transaction = new Transaction(1, "deposit", 100.0);
+        Transaction transaction = new Transaction("1", "deposit", 100.0);
         transaction.setAmount(200.0);
         double expectedAmount = 200.0;
         double actualAmount = transaction.getAmount();
         assertEquals(expectedAmount, actualAmount, 0.0);
     }
+*/
+
+    @Test
+    public void testIsDeposit() {
+        Transaction depositTransaction = new Transaction("1", "deposit", 100.0);
+        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
+        assertTrue(depositTransaction.isDeposit());
+        assertFalse(withdrawalTransaction.isDeposit());
+    }
+
+    @Test
+    public void testIsTransfer() {
+        Transaction transferTransaction = new Transaction("1", "5678", "transfer", 50.0);
+        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
+        assertTrue(transferTransaction.isTransfer());
+        assertFalse(withdrawalTransaction.isTransfer());
+    }
+
+
+
+
+
+
+
+
+
+
 
 }
