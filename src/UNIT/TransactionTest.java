@@ -47,6 +47,22 @@ public class TransactionTest {
         Transaction transaction = new Transaction("1", "deposit", 100.0);
         assertEquals("2023-06-10", transaction.getTransactionDate());
     }
+    @Test
+    public void testIsDeposit() {
+        Transaction depositTransaction = new Transaction("1", "deposit", 100.0);
+        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
+        assertTrue(depositTransaction.isDeposit());
+        assertFalse(withdrawalTransaction.isDeposit());
+    }
+
+    @Test
+    public void testIsTransfer() {
+        Transaction transferTransaction = new Transaction("1", "5678", "transfer", 50.0);
+        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
+        assertTrue(transferTransaction.isTransfer());
+        assertFalse(withdrawalTransaction.isTransfer());
+    }
+
 /*
     @Test
     public void testSetID() {
@@ -85,21 +101,6 @@ public class TransactionTest {
     }
 */
 
-    @Test
-    public void testIsDeposit() {
-        Transaction depositTransaction = new Transaction("1", "deposit", 100.0);
-        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
-        assertTrue(depositTransaction.isDeposit());
-        assertFalse(withdrawalTransaction.isDeposit());
-    }
-
-    @Test
-    public void testIsTransfer() {
-        Transaction transferTransaction = new Transaction("1", "5678", "transfer", 50.0);
-        Transaction withdrawalTransaction = new Transaction("2", "withdrawal", 50.0);
-        assertTrue(transferTransaction.isTransfer());
-        assertFalse(withdrawalTransaction.isTransfer());
-    }
 
 
 

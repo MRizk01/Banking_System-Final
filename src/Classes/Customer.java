@@ -162,6 +162,22 @@ public class Customer {
         return dataOfBirth;
     }
 
+    //view account details
+    public void viewAccountDetails() {
+        System.out.println("Account details for " + this.name);
+        System.out.println("ID: " + this.ID);
+        System.out.println("Join Date: " + this.joinDate);
+        System.out.println("Nationality: " + this.nationality);
+        System.out.println("National ID: " + this.nationalID);
+        System.out.println("Phone: " + this.phone);
+        System.out.println("Date of Birth: " + this.dataOfBirth);
+        System.out.println("Address: " + this.address);
+        System.out.println("Balance: " + this.balance);
+    }
+
+
+
+
     //withdraw
     public void withdraw(double amount){
         if(amount>this.balance){
