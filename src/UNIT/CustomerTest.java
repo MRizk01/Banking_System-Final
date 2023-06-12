@@ -3,6 +3,8 @@ import Classes.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -175,6 +177,30 @@ public class CustomerTest {
     public void testSetAddress() {
         customer.setAddress("456 Main St.");
         assertEquals("456 Main St.", customer.getAddress());
+    }
+
+    @Test
+    public void testViewAccountDetails() {
+        // create a new customer object and set its attributes
+        Customer customer = new Customer("2003", "password", "Egypt", "12345678910112", "Alice Smith", "01124855375", "1990-01-01", "123 Main St");
+        customer.setBalance(1000);
+
+        // call the viewAccountDetails() method and capture the output in a string
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        customer.viewAccountDetails();
+        String output = outContent.toString().trim();
+
+        // assert that the output contains the expected values
+        assertTrue(output.contains("Account details for Alice Smith"));
+        assertTrue(output.contains("ID: 2003"));
+        assertTrue(output.contains("Join Date: "));
+        assertTrue(output.contains("Nationality: Egypt"));
+        assertTrue(output.contains("National ID: 12345678910112"));
+        assertTrue(output.contains("Phone: 01124855375"));
+        assertTrue(output.contains("Date of Birth: 1990-01-01"));
+        assertTrue(output.contains("Address: 123 Main St"));
+        assertTrue(output.contains("Balance: 1000.0"));
     }
 
 
