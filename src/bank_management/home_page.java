@@ -99,11 +99,10 @@ public class home_page extends javax.swing.JFrame implements Runnable{
                     home_login.repaint();
                     home_login.revalidate();
                 }
-                Thread.sleep(50);
+                Thread.sleep(10);
             }
         }
         catch(Exception e){
-
         }
     }
     public void getindex(String name){
@@ -2903,7 +2902,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         finally {
             try {
                 if (conn != null) {
-                    conn.close();
+                    //conn.close();
                 }
                 if (stt != null) {
                     stt.close();
@@ -2913,8 +2912,15 @@ public class home_page extends javax.swing.JFrame implements Runnable{
             }
         }
     }
+
+    public void test_userlist(){
+        for (int i = 0;i<100;i++){
+            user_list();
+        }
+    }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        test_userlist();
         user_list();
 
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -2922,6 +2928,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private void accountaccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountaccountActionPerformed
 
     }//GEN-LAST:event_accountaccountActionPerformed
+
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
@@ -3158,6 +3165,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private void full_table1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_full_table1ComponentResized
         // TODO add your handling code here:
     }//GEN-LAST:event_full_table1ComponentResized
+
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         user_main.removeAll();

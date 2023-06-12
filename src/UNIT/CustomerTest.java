@@ -29,6 +29,7 @@ public class CustomerTest {
         customer.withdraw(500);
         assertEquals(500, customer.getBalance(), 0);
     }
+
     @Test
     public void testWithdrawGreaterThanBalance() {
         customer.setBalance(1000);

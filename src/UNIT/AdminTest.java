@@ -54,7 +54,7 @@ public class AdminTest {
     @Test
     public void testCreateCustomerWithValidData() {
         // Create a new customer and add it to the list
-        admin.createCustomer("2001", "123456",  "Egypt", "32117210607621", "Fname", "00000000000", "2000-10-19", "address");
+        admin.createCustomer("2001", "123456",  "Egypt", "62117210607621", "Fname", "00000000000", "2000-10-19", "address");
 
         // Retrieve the updated customer and verify that the values were set correctly
         assertEquals(1, admin.getCustomerList().size());

@@ -47,43 +47,7 @@ public class TransactionTest {
         Transaction transaction = new Transaction("1", "deposit", 100.0);
         assertEquals("2023-06-10", transaction.getTransactionDate());
     }
-/*
-    @Test
-    public void testSetID() {
-        Transaction transaction = new Transaction("1","deposit", 100.0);
-        transaction.setID("2");
-        String expectedID = "2";
-        String actualID = transaction.getID();
-        assertEquals(expectedID, actualID);
-    }
 
-    @Test
-    public void testSetRecipientID() {
-        Transaction transaction = new Transaction("1", "transfer", 100.0);
-        transaction.setRecipientID("2");
-        String expectedRecipientID = "2";
-        String actualRecipientID = transaction.getRecipientID();
-        assertEquals(expectedRecipientID, actualRecipientID);
-    }
-
-    @Test
-    public void testSetType() {
-        Transaction transaction = new Transaction("1", "deposit", 100.0);
-        transaction.setType("withdrawal");
-        String expectedType = "withdrawal";
-        String actualType = transaction.getType();
-        assertEquals(expectedType, actualType);
-    }
-
-    @Test
-    public void testSetAmount() {
-        Transaction transaction = new Transaction("1", "deposit", 100.0);
-        transaction.setAmount(200.0);
-        double expectedAmount = 200.0;
-        double actualAmount = transaction.getAmount();
-        assertEquals(expectedAmount, actualAmount, 0.0);
-    }
-*/
 
     @Test
     public void testIsDeposit() {

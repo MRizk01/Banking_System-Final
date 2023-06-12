@@ -116,6 +116,8 @@ public class Customer {
     public String getAddress() {
         return address;
     }
+
+
     public Customer(String ID, String password, String nationality, String nationalID, String name, String phone, String dataOfBirth, String address) {
         this.balance=0;
         this.ID = ID;
