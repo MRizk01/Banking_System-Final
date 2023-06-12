@@ -99,11 +99,10 @@ public class home_page extends javax.swing.JFrame implements Runnable{
                     home_login.repaint();
                     home_login.revalidate();
                 }
-                Thread.sleep(50);
+                Thread.sleep(10);
             }
         }
         catch(Exception e){
-
         }
     }
     public void getindex(String name){
@@ -740,7 +739,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
 
         jButton49.setFont(new java.awt.Font("Sitka Small", 1, 24)); // NOI18N
         jButton49.setForeground(new java.awt.Color(255, 255, 255));
-        jButton49.setText("Dash Board");
+        jButton49.setText("DashBoard");
         jButton49.setContentAreaFilled(false);
         jButton49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1361,82 +1360,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(39, 191, 0, 204);
         details11.add(jLabel123, gridBagConstraints);
 
-        jLabel124.setText("Executive ID:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 164, 0, 0);
-        details11.add(jLabel124, gridBagConstraints);
-
-        jLabel125.setText("Password:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 177, 0, 0);
-        details11.add(jLabel125, gridBagConstraints);
-
-        jLabel126.setText("Designation :");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 166, 0, 0);
-        details11.add(jLabel126, gridBagConstraints);
-
-        jLabel127.setText("NID:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 205, 0, 0);
-        details11.add(jLabel127, gridBagConstraints);
-
-        jLabel128.setText("Date Of Birth:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 160, 0, 0);
-        details11.add(jLabel128, gridBagConstraints);
-
-        jLabel129.setText("Join Date:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 15;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 180, 0, 0);
-        details11.add(jLabel129, gridBagConstraints);
-
-        jLabel130.setText("Nationality :");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 17;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 171, 0, 0);
-        details11.add(jLabel130, gridBagConstraints);
-
-        jLabel131.setText("Phone Number:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 19;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 155, 0, 0);
-        details11.add(jLabel131, gridBagConstraints);
-
-        jLabel132.setText("Name: ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 193, 0, 0);
-        details11.add(jLabel132, gridBagConstraints);
 
         jTextField59.setEditable(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1532,14 +1455,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 204);
         details11.add(jTextField69, gridBagConstraints);
 
-        jButton52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton52.setForeground(new java.awt.Color(0, 102, 102));
-        jButton52.setText("Search");
-        jButton52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton52ActionPerformed(evt);
-            }
-        });
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -1549,12 +1465,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         gridBagConstraints.insets = new java.awt.Insets(11, 158, 0, 0);
         details11.add(jButton52, gridBagConstraints);
 
-        jButton50.setText("Update");
-        jButton50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton50ActionPerformed(evt);
-            }
-        });
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 23;
@@ -1627,12 +1538,6 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         jScrollPane8.setViewportView(full_table3);
 
 
-        jButton57.setText("Delete");
-        jButton57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton57ActionPerformed(evt);
-            }
-        });
 
 
 
@@ -2997,7 +2902,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         finally {
             try {
                 if (conn != null) {
-                    conn.close();
+                    //conn.close();
                 }
                 if (stt != null) {
                     stt.close();
@@ -3007,8 +2912,15 @@ public class home_page extends javax.swing.JFrame implements Runnable{
             }
         }
     }
+
+    public void test_userlist(){
+        for (int i = 0;i<100;i++){
+            user_list();
+        }
+    }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        test_userlist();
         user_list();
 
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -3016,6 +2928,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private void accountaccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountaccountActionPerformed
 
     }//GEN-LAST:event_accountaccountActionPerformed
+
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
@@ -3228,39 +3141,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
         reg.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    public void ex_list(){
-        try{
-            list.setText("Executive List");
-            conn = Dbconnect.dbconnection();
-            stt = conn.createStatement();
-            stt.execute("USE bank_management");
-            String query = "select* from executive";
-            res = stt.executeQuery(query);
 
-            admin_main.removeAll();
-            admin_main.repaint();
-            admin_main.revalidate();
-            admin_main.repaint();
-            admin_main.revalidate();
-
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
-        }
-
-        finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-                if (stt != null) {
-                    stt.close();
-                }
-            } catch (SQLException sqlee) {
-                JOptionPane.showMessageDialog(null, sqlee.toString());
-            }
-        }
-    }
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         user_main.removeAll();
         user_main.repaint();
@@ -3284,6 +3165,7 @@ public class home_page extends javax.swing.JFrame implements Runnable{
     private void full_table1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_full_table1ComponentResized
         // TODO add your handling code here:
     }//GEN-LAST:event_full_table1ComponentResized
+
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         user_main.removeAll();
@@ -4047,267 +3929,14 @@ public class home_page extends javax.swing.JFrame implements Runnable{
 
 
 
-    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
-        try{
-            conn = Dbconnect.dbconnection();
-            stt = conn.createStatement();
-            stt.execute("USE bank_management");
 
-            DefaultTableModel model = (DefaultTableModel) full_table3.getModel();
-            int srow = full_table3.getSelectedRow();
-
-            String id = model.getValueAt(srow, 0).toString();
-            stt.executeUpdate("delete from executive where id='"+id+"'");
-            model.removeRow(srow);
-            JOptionPane.showMessageDialog(null, "Delete Successfully");
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Not select any row");
-        }
-        finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-                if (stt != null) {
-                    stt.close();
-                }
-            } catch (SQLException sqlee) {
-                JOptionPane.showMessageDialog(null, sqlee.toString());
-            }
-        }
-    }//GEN-LAST:event_jButton57ActionPerformed
 
     private void full_table3ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_full_table3ComponentResized
         // TODO add your handling code here:
     }//GEN-LAST:event_full_table3ComponentResized
 
-    private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
-        try{
-            conn = Dbconnect.dbconnection();
-            stt = conn.createStatement();
-            stt.execute("USE bank_management");
-            String errorset= "";
-            int check=0;
-            String  name3 = jTextField61.getText();
-            String pass3 = jTextField62.getText();
-            String designation3 = jTextField63.getText();
-            String dob3 = jTextField65.getText();
-            String address3 = jTextField68.getText();
-            String  p_number3 = jTextField80.getText();
 
-            //pass
-            if(pass3 == null || pass3.isEmpty()){
-                errorset+="Password should not be empty!\n";
-                jTextField62.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                check=1;
-            }
-            else if(pass3.length()<6){
-                errorset+="Password length should be more than or equal 6!\n";
-                jTextField62.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                check=1;
-            }
-            else{
-                jTextField62.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-            }
 
-            if(designation3 == null || designation3.isEmpty()){
-                jTextField63.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Designation should not be empty!\n";
-                check=1;
-            }
-            else if (!designation3.matches("^[A-z]+$")) {
-                jTextField63.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Designation is invalid!";
-                check=1;
-            }
-            else{
-                jTextField63.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-            }
-
-            //name
-            if(name3 == null || name3.isEmpty()){
-                jTextField61.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Name should not be empty!\n";
-                check=1;
-            }
-            else if (name3.matches("^[a-zA-Z\\s]+$")) {
-                if(name3.length()<4){
-                    jTextField61.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                    errorset+="Name should be grater than 3 letter!";
-                    check=1;
-                }
-                else{
-                    jTextField61.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-                }
-
-            }
-            else if(!name3.matches("^[a-zA-Z\\s]+$")){
-                jTextField61.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Name is  invalid!";
-                check=1;
-            }
-
-            if(dob3 == null || dob3.isEmpty()){
-                errorset+="Date of Birth should not be empty! format (yyyy-mm-day)\n";
-                jTextField65.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                check=1;
-            }
-            else if (!dob3.matches("^(\\d{4})-(\\d{1,2})-(\\d{1,2})$")) {
-                jTextField65.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Invalid Date of Birth ! format (yyyy-mm-day)\n";
-                check=1;
-            }
-            else{
-                jTextField65.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-            }
-
-            //phone number
-            if(p_number3 == null || p_number3.isEmpty()){
-                errorset+="Phone Number should not be empty!\n";
-                jTextField80.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                check=1;
-            }
-            else if(!p_number3.matches("^(?:\\+88|01)?\\d{11}$")){
-                jTextField80.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Phone Number is not valid!\n";
-                check=1;
-            }
-            else{
-                jTextField80.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-            }
-
-            //address
-            if(address3 == null || address3.isEmpty()){
-                jTextField68.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Address should not be empty!\n";
-                check=1;
-            }
-            else if (address3.matches("^[a-zA-Z\\s]+$")) {
-                if(address3.length()<4){
-                    jTextField68.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                    errorset+="Address should be grater than 3 letter!\n";
-                    check=1;
-                }
-                else{
-                    jTextField68.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.GREEN));
-                }
-
-            }
-            else if(!address3.matches("^[a-zA-Z\\s]+$")){
-                jTextField68.setBorder(BorderFactory.createMatteBorder(2,2,2,2,Color.red));
-                errorset+="Address is  invalid!\n";
-                check=1;
-            }
-
-            if(check==0){
-                String query = "Update executive set"
-                        +" name = '"+jTextField61.getText()+"',"
-                        +" pass = '"+jTextField62.getText()+"',"
-                        +" designation = '"+jTextField63.getText()+"',"
-                        +" dob = '"+jTextField65.getText()+"',"
-                        +" address = '"+jTextField68.getText()+"',"
-                        +" p_number = '"+jTextField80.getText()+"'"
-                        +"where id='"+jTextField59.getText()+"'";
-
-                stt.executeUpdate(query);
-                JOptionPane.showMessageDialog(null,"Successfully Updated !");
-            }
-
-            else{
-                JOptionPane.showMessageDialog(null,errorset);
-
-            }
-
-        }
-        catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex.toString());// sarver error ,show message
-        }
-        finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-                if (stt != null) {
-                    stt.close();
-                }
-            } catch (SQLException sqlee) {
-                JOptionPane.showMessageDialog(null, sqlee.toString());
-            }
-        }
-    }//GEN-LAST:event_jButton50ActionPerformed
-
-    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
-        try{
-            conn = Dbconnect.dbconnection();
-            stt = conn.createStatement();
-            stt.execute("USE bank_management");
-
-            if((jTextField69.getText()!= null && !jTextField69.getText().isEmpty()) ){
-                String query = "SELECT* FROM executive WHERE id ="+"\'"+ jTextField69.getText() +"\'"+" or nid="+"\'" + jTextField69.getText()+"\'";
-                res =  stt.executeQuery(query);
-                int check =0;
-                while(res.next()){
-                    jTextField59.setText(res.getString("id"));
-                    jTextField61.setText(res.getString("name"));
-                    jTextField62.setText(res.getString("pass"));
-                    jTextField63.setText(res.getString("designation"));
-                    jTextField64.setText(res.getString("nid"));
-                    jTextField65.setText(res.getString("dob"));
-                    jTextField66.setText(res.getString("join_date"));
-                    jTextField67.setText(res.getString("nation"));
-                    jTextField80.setText(res.getString("p_number"));
-                    jTextField68.setText(res.getString("address"));
-
-                    check=1;
-                }
-                if(check==0){
-                    JOptionPane.showMessageDialog(null,"Not match any data");
-
-                    jTextField61.setText("");
-                    jTextField62.setText("");
-                    jTextField63.setText("");
-                    jTextField64.setText("");
-                    jTextField65.setText("");
-                    jTextField66.setText("");
-                    jTextField67.setText("");
-                    jTextField68.setText("");
-                    jTextField80.setText("");
-
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(null,"Invalid input !");
-
-                jTextField61.setText("");
-                jTextField62.setText("");
-                jTextField63.setText("");
-                jTextField64.setText("");
-                jTextField65.setText("");
-                jTextField66.setText("");
-                jTextField67.setText("");
-                jTextField68.setText("");
-                jTextField80.setText("");
-            }
-
-        }
-
-        catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.toString());// sarver error ,show message
-        }
-        finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-                if (stt != null) {
-                    stt.close();
-                }
-            } catch (SQLException sqlee) {
-                JOptionPane.showMessageDialog(null, sqlee.toString());
-            }
-        }
-    }//GEN-LAST:event_jButton52ActionPerformed
 
     private void jTextField62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField62ActionPerformed
         // TODO add your handling code here:
